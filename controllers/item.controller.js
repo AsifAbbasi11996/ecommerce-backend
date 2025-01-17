@@ -97,6 +97,7 @@ export const searchItems = async (req, res) => {
       $or: [
         { itemName: { $regex: query, $options: 'i' } },
         { brand: { $regex: query, $options: 'i' } },
+        { category: { $regex: query, $options: 'i' } },
         { itemdetail: { $regex: query, $options: 'i' } }
       ]
     })
